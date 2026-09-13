@@ -459,5 +459,6 @@ personal_dashboard/
 Backend · Cloud · Data Engineer in progress
 
 - GitHub: [@taeyoungk-dev](https://github.com/taeyoungk-dev)
-- LinkedIn: [linkedin.com/in/katiekim412](http://www.linkedin.com/in/katiekim412)
-- Email: [katiekim412@gmail.com](mailto:katiekim412@gmail.com)
+- LinkedIn: [linkedin.com/in/taeyoung-kim-9b743140b](https://www.linkedin.com/in/taeyoung-kim-9b743140b/)
+- Tech Blog: [taeyoungkim.dev/ko](https://www.taeyoungkim.dev/ko)
+- Email: [taeyoungkdev@gmail.com](mailto:taeyoungkdev@gmail.com)
