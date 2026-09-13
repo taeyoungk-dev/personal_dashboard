@@ -360,7 +360,7 @@ npm ci
 npm run dev
 ```
 
-브라우저에서 [http://localhost:5173](http://localhost:5173)을 엽니다.
+브라우저에서 [http://localhost:8081](http://localhost:8081)을 엽니다.
 
 ### Quality checks
 
