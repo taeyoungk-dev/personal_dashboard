@@ -128,7 +128,7 @@ const courses = [
 ];
 
 const portfolioProjects = [
-  { name: "Northstar Personal OS", type: "Flagship", description: "목표·실행·학습·재정을 하나의 데이터 흐름으로 통합한 개인 운영체제", stack: ["React 19", "TypeScript", "Cloudflare"], status: "Building", url: "https://github.com/taeyoungk-dev/personal_dashboard" },
+  { name: "Daily Focus Personal OS", type: "Flagship", description: "목표·실행·학습·재정을 하나의 데이터 흐름으로 통합한 개인 운영체제", stack: ["React 19", "TypeScript", "Cloudflare"], status: "Building", url: "https://github.com/taeyoungk-dev/personal_dashboard" },
   { name: "Daily Compass", type: "Cloud", description: "Azure Functions와 React로 설계한 개인 맞춤형 데일리 대시보드", stack: ["React", "Azure", "Cosmos DB"], status: "Merged", url: "https://github.com/taeyoungk-dev/daily-compass" },
   { name: "Household Account Book", type: "Java", description: "Builder 패턴과 파일 I/O를 적용한 Java Swing 가계부", stack: ["Java", "Swing", "Builder"], status: "Merged", url: "https://github.com/taeyoungk-dev/household-account-book" },
   { name: "Modern TODO", type: "Web", description: "상태 관리와 localStorage 영속성을 구현한 Vanilla JS 할 일 앱", stack: ["JavaScript", "CSS", "Web API"], status: "Merged", url: "https://github.com/taeyoungk-dev/todo-list-work" },
@@ -167,13 +167,13 @@ export default function Home() {
   useEffect(() => {
     const frame = window.requestAnimationFrame(() => {
       try {
-        const savedTasks = window.localStorage.getItem("northstar-tasks");
-        const savedTransactions = window.localStorage.getItem("northstar-transactions");
-        const savedStudy = window.localStorage.getItem("northstar-study-minutes");
+        const savedTasks = window.localStorage.getItem("daily-focus-tasks");
+        const savedTransactions = window.localStorage.getItem("daily-focus-transactions");
+        const savedStudy = window.localStorage.getItem("daily-focus-study-minutes");
         if (savedTasks) setTasks(JSON.parse(savedTasks));
         if (savedTransactions) setTransactions(JSON.parse(savedTransactions));
         if (savedStudy) setStudyMinutes(Number(savedStudy));
-        setDark(window.localStorage.getItem("northstar-theme") === "dark");
+        setDark(window.localStorage.getItem("daily-focus-theme") === "dark");
       } catch {
         // Corrupted local data falls back to the curated sample dataset.
       }
@@ -236,10 +236,10 @@ export default function Home() {
 
   useEffect(() => {
     if (!hydrated) return;
-    window.localStorage.setItem("northstar-tasks", JSON.stringify(tasks));
-    window.localStorage.setItem("northstar-transactions", JSON.stringify(transactions));
-    window.localStorage.setItem("northstar-study-minutes", String(studyMinutes));
-    window.localStorage.setItem("northstar-theme", dark ? "dark" : "light");
+    window.localStorage.setItem("daily-focus-tasks", JSON.stringify(tasks));
+    window.localStorage.setItem("daily-focus-transactions", JSON.stringify(transactions));
+    window.localStorage.setItem("daily-focus-study-minutes", String(studyMinutes));
+    window.localStorage.setItem("daily-focus-theme", dark ? "dark" : "light");
   }, [tasks, transactions, studyMinutes, dark, hydrated]);
 
   useEffect(() => {
@@ -306,7 +306,7 @@ export default function Home() {
         <aside className={`sidebar ${mobileMenu ? "sidebar-open" : ""}`}>
           <div className="brand-lockup">
             <div className="brand-mark" aria-hidden="true"><Compass size={20} strokeWidth={2.4} /></div>
-            <div><strong>Northstar</strong><span>Personal OS</span></div>
+            <div><strong>Daily Focus</strong><span>Personal OS</span></div>
             <Button type="button" variant="ghost" size="icon-sm" className="mobile-close" aria-label="메뉴 닫기" onClick={() => setMobileMenu(false)}><X /></Button>
           </div>
 
@@ -339,7 +339,7 @@ export default function Home() {
           <header className="topbar">
             <div className="topbar-left">
               <Button type="button" variant="ghost" size="icon" className="menu-trigger" aria-label="메뉴 열기" onClick={() => setMobileMenu(true)}><Menu /></Button>
-              <div className="breadcrumb"><span>Northstar</span><ChevronRight size={14} /><strong>{currentLabel}</strong></div>
+              <div className="breadcrumb"><span>Daily Focus</span><ChevronRight size={14} /><strong>{currentLabel}</strong></div>
             </div>
             <div className="topbar-actions">
               <button className="search-box" type="button" aria-label="빠른 검색 열기" onClick={() => setSearchDialog(true)}><Search size={17} /><span>빠른 검색</span><kbd>⌘ K</kbd></button>
@@ -415,7 +415,7 @@ function OverviewView({ tasks, dayProgress, totals, toggleTask, onAddTask, onNav
       </section>
 
       <section className="section-block">
-        <div className="section-title-row"><div><span className="section-kicker">NORTHSTAR MAP</span><h2>목표 레이더</h2></div><Button variant="ghost" size="sm" className="link-button" onClick={() => onNavigate("study")}>로드맵 열기 <ArrowUpRight /></Button></div>
+        <div className="section-title-row"><div><span className="section-kicker">DAILY FOCUS MAP</span><h2>목표 레이더</h2></div><Button variant="ghost" size="sm" className="link-button" onClick={() => onNavigate("study")}>로드맵 열기 <ArrowUpRight /></Button></div>
         <div className="goal-grid">{goalProgress.map(({ label, value, detail, icon: Icon, tone }) => <article className={`goal-card tone-${tone}`} key={label}><div className="goal-card-top"><div className="goal-icon"><Icon /></div><span>{value}%</span></div><h3>{label}</h3><p>{detail}</p><Progress value={value} className="goal-progress" aria-label={`${label} 목표 진척도 ${value}%`} /></article>)}</div>
       </section>
 

@@ -1,4 +1,4 @@
-# Northstar — Personal OS
+# Daily Focus — Personal OS
 
 [![Quality Gate](https://github.com/taeyoungk-dev/personal_dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/taeyoungk-dev/personal_dashboard/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -7,7 +7,7 @@
 
 > 장기 목표를 오늘 실행할 수 있는 행동으로 바꾸고, 그 과정을 데이터와 코드로 증명하는 개인 운영 대시보드
 
-Northstar는 영어, 컴퓨터과학 학위, 소프트웨어 엔지니어 커리어, 중국어, 재정이라는 서로 다른 목표를 하나의 실행 시스템으로 연결합니다. 단순한 포트폴리오 소개 페이지가 아니라 매일 직접 사용하면서 성장 기록을 축적하도록 만든 **working product**입니다.
+Daily Focus는 영어, 컴퓨터과학 학위, 소프트웨어 엔지니어 커리어, 중국어, 재정이라는 서로 다른 목표를 하나의 실행 시스템으로 연결합니다. 단순한 포트폴리오 소개 페이지가 아니라 매일 직접 사용하면서 성장 기록을 축적하도록 만든 **working product**입니다.
 
 ## Contents
 
@@ -30,7 +30,7 @@ Northstar는 영어, 컴퓨터과학 학위, 소프트웨어 엔지니어 커리
 
 | Item | Detail |
 | --- | --- |
-| Project | Northstar — Personal OS |
+| Project | Daily Focus — Personal OS |
 | Type | 개인 생산성·학습·커리어·재정 통합 대시보드 |
 | Status | Local-first MVP |
 | Role | Product planning, UX/UI design, frontend architecture, implementation |
@@ -39,7 +39,7 @@ Northstar는 영어, 컴퓨터과학 학위, 소프트웨어 엔지니어 커리
 | Source projects | Household Account Book, Daily Compass, Modern TODO |
 | Repository | [github.com/taeyoungk-dev/personal_dashboard](https://github.com/taeyoungk-dev/personal_dashboard) |
 
-### North star
+### Daily focus
 
 > 수학으로 사고하고, 영어로 소통하고, 코드로 만들고, 시스템으로 확장하며, 데이터를 이해하는 글로벌 기술 인재
 
@@ -64,7 +64,7 @@ Northstar는 영어, 컴퓨터과학 학위, 소프트웨어 엔지니어 커리
 
 ### Solution
 
-Northstar는 모든 활동을 **목표 영역이 있는 실행 단위**로 모델링합니다.
+Daily Focus는 모든 활동을 **목표 영역이 있는 실행 단위**로 모델링합니다.
 
 ```text
 Long-term goal
@@ -95,7 +95,7 @@ Completion record / portfolio evidence
 
 - 오늘의 실행률과 완료 개수 실시간 계산
 - 연속 실행 일수와 주간 집중시간 요약
-- 목표별 진행도를 보여주는 Northstar Map
+- 목표별 진행도를 보여주는 Daily Focus Map
 - 2027 TOEFL 목표일부터 장기 글로벌 커리어까지 이어지는 Flight Plan
 - 이번 달 수입·지출·잔액을 요약하는 Financial Runway
 
@@ -160,7 +160,7 @@ Completion record / portfolio evidence
 
 이 프로젝트는 기존 결과물을 단순히 한 저장소에 복사하지 않고, 각 프로젝트의 핵심 학습 결과를 하나의 제품 흐름으로 재설계했습니다.
 
-| Source project | Original strengths | Integrated into Northstar | Improvement |
+| Source project | Original strengths | Integrated into Daily Focus | Improvement |
 | --- | --- | --- | --- |
 | [household-account-book](https://github.com/taeyoungk-dev/household-account-book) | Java Swing, Builder Pattern, CSV File I/O, transaction table | Finance, ledger, monthly cashflow | 웹 접근성, 반응형 UI, 실시간 집계, 커리어 투자 관점 추가 |
 | [daily-compass](https://github.com/taeyoungk-dev/daily-compass) | React dashboard, Azure Functions, Cosmos DB, cloud architecture | Today dashboard, daily planning, career overview | 장기 목표·학업·재정 데이터 연결과 정보 구조 개선 |
@@ -170,7 +170,7 @@ Completion record / portfolio evidence
 
 ```mermaid
 flowchart LR
-  TODO[Modern TODO\nNext actions] --> CORE[Northstar State]
+  TODO[Modern TODO\nNext actions] --> CORE[Daily Focus State]
   DAILY[Daily Compass\nDaily context] --> CORE
   MONEY[Household Ledger\nFinancial data] --> CORE
   CORE --> TODAY[Today]
@@ -309,7 +309,7 @@ Checkout → Node.js 22 setup → npm ci → ESLint → Production build
 
 ### Why one dashboard instead of separate tools?
 
-할 일, 학습, 커리어, 재정을 각각 최적화하면 사용자는 정보를 직접 연결해야 합니다. Northstar는 오늘의 행동이 어떤 학습 목표와 커리어 증거로 이어지는지 보여주는 데 제품 가치를 두었습니다.
+할 일, 학습, 커리어, 재정을 각각 최적화하면 사용자는 정보를 직접 연결해야 합니다. Daily Focus는 오늘의 행동이 어떤 학습 목표와 커리어 증거로 이어지는지 보여주는 데 제품 가치를 두었습니다.
 
 ### Why not add Kafka and Redis immediately?
 
@@ -394,7 +394,7 @@ personal_dashboard/
 ├── docs/
 │   └── architecture.md        # ADR and production evolution
 ├── public/
-│   └── favicon.svg            # Northstar brand mark
+│   └── favicon.svg            # Daily Focus brand mark
 ├── types/
 │   └── webmcp.d.ts            # Browser WebMCP type declarations
 ├── package.json
